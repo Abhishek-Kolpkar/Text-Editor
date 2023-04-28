@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import TitleBar from './TitleBar'
+import { Editor, EditorState } from 'draft-js'
 
 function App() {
+  const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
+
   return (
-    <div>
-      <h1>Text Editor | Draft.js</h1>
-    </div>
+    <main>
+      <TitleBar text={editorState}/>
+
+      <div className="m-1 editor">
+        <Editor editorState={editorState} onChange={setEditorState}/>
+      </div>
+    </main>
   )
 }
 

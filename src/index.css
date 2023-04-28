@@ -20,3 +20,12 @@ main{
   width: 85%;
   margin: 0 auto;
 }
+
+.editor{
+  width: 100%;
+  min-height: 450px;
+  padding: 12px 24px;
+  border: 2px solid #2E2E2E;
+  border-radius: 10px;
+  font-size: 20px;
+}
